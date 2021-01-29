@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 01, 2020 at 12:10 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Host: localhost
+-- Generation Time: Jan 29, 2021 at 10:08 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -362,10 +361,8 @@ CREATE TABLE `ems_events` (
 --
 
 INSERT INTO `ems_events` (`id`, `title`, `start_event`, `end_event`) VALUES
-(3, 'Weekend Festival', '2020-07-10 10:00:00', '2020-07-10 13:00:00'),
-(5, 'Important Meeting', '2020-07-14 00:00:00', '2020-07-16 00:00:00'),
-(7, 'Hello world', '2020-07-05 11:30:00', '2020-07-08 08:30:00'),
-(11, 'Eid Ul Azha', '2020-07-29 00:00:00', '2020-08-05 00:00:00');
+(13, 'Utshah Ekta Uzbuk', '2020-09-22 00:00:00', '2020-09-23 00:00:00'),
+(15, 'sadfsda', '2021-01-02 06:00:00', '2021-01-02 13:00:00');
 
 -- --------------------------------------------------------
 
@@ -423,7 +420,9 @@ CREATE TABLE `ems_exam_marksheet` (
 
 INSERT INTO `ems_exam_marksheet` (`id`, `student_id`, `class_id`, `shift_id`, `semester_id`, `exam_year`, `total_marks`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, 1, 1, '2020', '425', '2020-07-27 07:38:34', NULL),
-(2, 6, 1, 1, 1, '2020', '361', '2020-07-27 21:58:56', NULL);
+(2, 6, 1, 1, 1, '2020', '361', '2020-07-27 21:58:56', NULL),
+(3, 2, 1, 1, 1, '2020', '265', '2020-08-20 14:24:31', NULL),
+(4, 6, 1, 1, 3, '2020', '300', '2020-08-30 18:24:43', NULL);
 
 -- --------------------------------------------------------
 
@@ -456,7 +455,19 @@ INSERT INTO `ems_exam_marks_subjects` (`id`, `marks_sheet_id`, `subject_id`, `su
 (9, 2, 3, 67, '2020-07-27 21:58:57', NULL),
 (10, 2, 4, 73, '2020-07-27 21:58:57', NULL),
 (11, 2, 5, 56, '2020-07-27 21:58:57', NULL),
-(12, 2, 6, 62, '2020-07-27 21:58:57', NULL);
+(12, 2, 6, 62, '2020-07-27 21:58:57', NULL),
+(13, 3, 1, 40, '2020-08-20 14:24:32', NULL),
+(14, 3, 2, 45, '2020-08-20 14:24:32', NULL),
+(15, 3, 3, 45, '2020-08-20 14:24:32', NULL),
+(16, 3, 4, 45, '2020-08-20 14:24:32', NULL),
+(17, 3, 5, 45, '2020-08-20 14:24:32', NULL),
+(18, 3, 6, 45, '2020-08-20 14:24:32', NULL),
+(19, 4, 1, 50, '2020-08-30 18:24:43', NULL),
+(20, 4, 2, 50, '2020-08-30 18:24:43', NULL),
+(21, 4, 3, 50, '2020-08-30 18:24:43', NULL),
+(22, 4, 4, 50, '2020-08-30 18:24:43', NULL),
+(23, 4, 5, 50, '2020-08-30 18:24:43', NULL),
+(24, 4, 6, 50, '2020-08-30 18:24:43', NULL);
 
 -- --------------------------------------------------------
 
@@ -556,7 +567,7 @@ CREATE TABLE `ems_leave_config` (
 
 INSERT INTO `ems_leave_config` (`id`, `type`, `days`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'Annual Leave', 20, 'Inactive', '2020-07-26 07:35:14', NULL),
-(2, 'Casual Leave', 10, 'Active', '2020-07-26 08:04:53', NULL),
+(2, 'Casual Leave', 10, 'Inactive', '2020-07-26 08:04:53', NULL),
 (3, 'Earned Leave', 33, 'Inactive', '2020-07-26 08:05:11', NULL),
 (4, 'Medical Leave', 10, 'Inactive', '2020-07-26 08:05:25', NULL),
 (5, 'Maternity Leave', 90, 'Active', '2020-07-26 08:05:47', NULL),
@@ -624,7 +635,10 @@ INSERT INTO `ems_monthly_fees` (`id`, `student_id`, `month_name`, `date`, `tutio
 (8, 1, 'March', '2020-03-29', 250, 0, 0, 250, '2020-07-29 11:40:16', NULL),
 (9, 6, 'January', '2020-01-29', 250, 0, 0, 250, '2020-07-29 12:24:48', NULL),
 (10, 2, 'March', '2020-03-29', 250, 0, 100, 350, '2020-07-29 12:28:33', NULL),
-(11, 3, 'February', '2020-02-29', 250, 0, 0, 250, '2020-07-29 19:26:01', NULL);
+(11, 3, 'February', '2020-02-29', 250, 0, 0, 250, '2020-07-29 19:26:01', NULL),
+(12, 4, 'May', '2020-05-30', 250, 0, 0, 250, '2020-08-30 18:23:39', NULL),
+(13, 4, 'February', '2020-03-01', 250, 350, 100, 700, '2020-08-30 18:23:55', NULL),
+(14, 7, 'June', '2020-06-21', 350, 350, 100, 800, '2020-09-21 23:26:31', NULL);
 
 -- --------------------------------------------------------
 
@@ -867,7 +881,9 @@ INSERT INTO `ems_student_attendance` (`id`, `date`, `teacher_id`, `class_id`, `s
 (1, '2020-07-28 21:40:28', 1, 1, 1, '2020-07-28 21:40:28', NULL),
 (2, '2020-07-29 02:20:09', 4, 2, 1, '2020-07-29 02:20:09', NULL),
 (3, '2020-07-31 02:08:27', 3, 1, 1, '2020-07-31 02:08:27', NULL),
-(4, '2020-07-31 02:19:27', 8, 2, 1, '2020-07-31 02:19:27', NULL);
+(4, '2020-07-31 02:19:27', 8, 2, 1, '2020-07-31 02:19:27', NULL),
+(5, '2020-09-21 23:28:22', 1, 1, 1, '2020-09-21 23:28:22', NULL),
+(6, '2021-01-02 10:43:55', 1, 1, 1, '2021-01-02 10:43:55', NULL);
 
 -- --------------------------------------------------------
 
@@ -912,7 +928,21 @@ INSERT INTO `ems_student_attendance_status` (`id`, `attendance_id`, `student_id`
 (21, 4, 9, 'absent', '2020-07-31 02:19:27', NULL),
 (22, 4, 10, 'present', '2020-07-31 02:19:27', NULL),
 (23, 4, 11, 'present', '2020-07-31 02:19:27', NULL),
-(24, 4, 12, 'present', '2020-07-31 02:19:27', NULL);
+(24, 4, 12, 'present', '2020-07-31 02:19:27', NULL),
+(25, 5, 1, 'present', '2020-09-21 23:28:22', NULL),
+(26, 5, 2, 'present', '2020-09-21 23:28:22', NULL),
+(27, 5, 3, 'present', '2020-09-21 23:28:22', NULL),
+(28, 5, 4, 'absent', '2020-09-21 23:28:22', NULL),
+(29, 5, 5, 'absent', '2020-09-21 23:28:22', NULL),
+(30, 5, 6, 'absent', '2020-09-21 23:28:22', NULL),
+(31, 5, 7, 'absent', '2020-09-21 23:28:22', NULL),
+(32, 6, 1, 'present', '2021-01-02 10:43:56', NULL),
+(33, 6, 2, 'present', '2021-01-02 10:43:56', NULL),
+(34, 6, 3, 'absent', '2021-01-02 10:43:56', NULL),
+(35, 6, 4, 'absent', '2021-01-02 10:43:56', NULL),
+(36, 6, 5, 'absent', '2021-01-02 10:43:56', NULL),
+(37, 6, 6, 'absent', '2021-01-02 10:43:56', NULL),
+(38, 6, 7, 'present', '2021-01-02 10:43:56', NULL);
 
 -- --------------------------------------------------------
 
@@ -1517,7 +1547,7 @@ ALTER TABLE `ems_employees`
 -- AUTO_INCREMENT for table `ems_events`
 --
 ALTER TABLE `ems_events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'EVENTS ID', AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'EVENTS ID', AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `ems_exam_grades`
@@ -1529,13 +1559,13 @@ ALTER TABLE `ems_exam_grades`
 -- AUTO_INCREMENT for table `ems_exam_marksheet`
 --
 ALTER TABLE `ems_exam_marksheet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'EXAM MARK SHEET ID', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'EXAM MARK SHEET ID', AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ems_exam_marks_subjects`
 --
 ALTER TABLE `ems_exam_marks_subjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'EXAM SUBJECT MARKS ID', AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'EXAM SUBJECT MARKS ID', AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `ems_exam_schedule`
@@ -1571,7 +1601,7 @@ ALTER TABLE `ems_libraries`
 -- AUTO_INCREMENT for table `ems_monthly_fees`
 --
 ALTER TABLE `ems_monthly_fees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'MONTHLY FEES ID', AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'MONTHLY FEES ID', AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `ems_notices`
@@ -1619,13 +1649,13 @@ ALTER TABLE `ems_students`
 -- AUTO_INCREMENT for table `ems_student_attendance`
 --
 ALTER TABLE `ems_student_attendance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'STUDENT ATTENDANCE ID', AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'STUDENT ATTENDANCE ID', AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `ems_student_attendance_status`
 --
 ALTER TABLE `ems_student_attendance_status`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ATTENDANCE STATUS ID', AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ATTENDANCE STATUS ID', AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `ems_subjects`
@@ -1662,118 +1692,6 @@ ALTER TABLE `salary_setting`
 --
 ALTER TABLE `smtp_setting`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SMTP ID', AUTO_INCREMENT=2;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `ems_admission_fees`
---
-ALTER TABLE `ems_admission_fees`
-  ADD CONSTRAINT `ems_admission_fees_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `ems_students` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_class_routine`
---
-ALTER TABLE `ems_class_routine`
-  ADD CONSTRAINT `ems_class_routine_ibfk_1` FOREIGN KEY (`class_id`) REFERENCES `ems_classes` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_class_routine_ibfk_2` FOREIGN KEY (`subject_id`) REFERENCES `ems_subjects` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_class_routine_ibfk_3` FOREIGN KEY (`shift_id`) REFERENCES `ems_shifts` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_class_routine_ibfk_4` FOREIGN KEY (`teacher_id`) REFERENCES `ems_teachers` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_designations`
---
-ALTER TABLE `ems_designations`
-  ADD CONSTRAINT `ems_designations_ibfk_1` FOREIGN KEY (`department_id`) REFERENCES `ems_departments` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_employees`
---
-ALTER TABLE `ems_employees`
-  ADD CONSTRAINT `ems_employees_ibfk_1` FOREIGN KEY (`employee_desg_id`) REFERENCES `ems_designations` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_employees_ibfk_2` FOREIGN KEY (`employee_dept_id`) REFERENCES `ems_departments` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_exam_marksheet`
---
-ALTER TABLE `ems_exam_marksheet`
-  ADD CONSTRAINT `ems_exam_marksheet_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `ems_students` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_exam_marksheet_ibfk_2` FOREIGN KEY (`class_id`) REFERENCES `ems_classes` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_exam_marksheet_ibfk_3` FOREIGN KEY (`shift_id`) REFERENCES `ems_shifts` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_exam_marksheet_ibfk_4` FOREIGN KEY (`semester_id`) REFERENCES `ems_semesters` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_exam_marks_subjects`
---
-ALTER TABLE `ems_exam_marks_subjects`
-  ADD CONSTRAINT `ems_exam_marks_subjects_ibfk_1` FOREIGN KEY (`marks_sheet_id`) REFERENCES `ems_exam_marksheet` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_exam_marks_subjects_ibfk_2` FOREIGN KEY (`subject_id`) REFERENCES `ems_subjects` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_exam_schedule`
---
-ALTER TABLE `ems_exam_schedule`
-  ADD CONSTRAINT `ems_exam_schedule_ibfk_1` FOREIGN KEY (`class_id`) REFERENCES `ems_classes` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_exam_schedule_ibfk_2` FOREIGN KEY (`shift_id`) REFERENCES `ems_shifts` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_exam_schedule_ibfk_3` FOREIGN KEY (`semester_id`) REFERENCES `ems_semesters` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_exam_schedule_ibfk_4` FOREIGN KEY (`subject_id`) REFERENCES `ems_subjects` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_exam_schedule_ibfk_5` FOREIGN KEY (`teacher_id`) REFERENCES `ems_teachers` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_libraries`
---
-ALTER TABLE `ems_libraries`
-  ADD CONSTRAINT `ems_libraries_ibfk_1` FOREIGN KEY (`class_id`) REFERENCES `ems_classes` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_libraries_ibfk_2` FOREIGN KEY (`subject_id`) REFERENCES `ems_subjects` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_monthly_fees`
---
-ALTER TABLE `ems_monthly_fees`
-  ADD CONSTRAINT `ems_monthly_fees_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `ems_students` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_org_config`
---
-ALTER TABLE `ems_org_config`
-  ADD CONSTRAINT `ems_org_config_ibfk_1` FOREIGN KEY (`timezone`) REFERENCES `ems_timezone` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_payments_details`
---
-ALTER TABLE `ems_payments_details`
-  ADD CONSTRAINT `ems_payments_details_ibfk_1` FOREIGN KEY (`payments_id`) REFERENCES `ems_create_payments` (`id`);
-
---
--- Constraints for table `ems_students`
---
-ALTER TABLE `ems_students`
-  ADD CONSTRAINT `ems_students_ibfk_1` FOREIGN KEY (`shift_id`) REFERENCES `ems_shifts` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_students_ibfk_2` FOREIGN KEY (`class_id`) REFERENCES `ems_classes` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_student_attendance`
---
-ALTER TABLE `ems_student_attendance`
-  ADD CONSTRAINT `ems_student_attendance_ibfk_2` FOREIGN KEY (`class_id`) REFERENCES `ems_classes` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_student_attendance_ibfk_3` FOREIGN KEY (`shift_id`) REFERENCES `ems_shifts` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_student_attendance_ibfk_4` FOREIGN KEY (`teacher_id`) REFERENCES `ems_teachers` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_student_attendance_status`
---
-ALTER TABLE `ems_student_attendance_status`
-  ADD CONSTRAINT `ems_student_attendance_status_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `ems_students` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_student_attendance_status_ibfk_2` FOREIGN KEY (`attendance_id`) REFERENCES `ems_student_attendance` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ems_teachers`
---
-ALTER TABLE `ems_teachers`
-  ADD CONSTRAINT `ems_teachers_ibfk_1` FOREIGN KEY (`department_id`) REFERENCES `ems_departments` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ems_teachers_ibfk_2` FOREIGN KEY (`designation_id`) REFERENCES `ems_designations` (`id`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

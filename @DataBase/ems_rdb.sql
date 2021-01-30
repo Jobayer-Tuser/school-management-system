@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 29, 2021 at 10:08 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.9
+-- Host: 127.0.0.1
+-- Generation Time: Jan 30, 2021 at 06:32 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,10 +48,10 @@ CREATE TABLE `ems_admins` (
 INSERT INTO `ems_admins` (`id`, `admin_id`, `admin_name`, `admin_email`, `admin_password`, `admin_phone_no`, `admin_type`, `admin_status`, `admin_image`, `created_at`, `updated_at`) VALUES
 (1, 'EMS#490-AD', 'Nirjhor Anjum Sir', 'nirjhor@adnsl.net', '6bf984e5ac5495f4bf891a740d9bd02184eec7d7', '01955778822', 'Root Administrator', 'Active', 'ADMIN2020JulSunIMAGE222nirjhoranjumsir.png', '2020-07-26 04:05:26', NULL),
 (2, 'EMS#948-AD', 'Md. Abdullah Al Mamun', 'md.aamroni@hotmail.com', '76742e98b788b5d69ca1f5afd691e8bb653f1ae4', '01316440504', 'Root Administrator', 'Active', 'ADMIN2020JulSunIMAGE325aamroni.png', '2020-07-26 04:06:06', NULL),
-(3, 'EMS#109-AD', 'Academic Moderator', 'admin.academic@gmail.com', '6bf984e5ac5495f4bf891a740d9bd02184eec7d7', '01316440504', 'Academic Administrator', 'Inactive', 'ADMIN2020JulSunIMAGE815avatar.png', '2020-07-26 04:08:35', '2020-07-26 04:09:34'),
 (4, 'EMS#482-AD', 'Accounts Moderator', 'admin.accounts@gmail.com', '6bf984e5ac5495f4bf891a740d9bd02184eec7d7', '01316440504', 'Accounts Administrator', 'Inactive', 'ADMIN2020JulSunIMAGE965avatar.png', '2020-07-26 04:09:22', NULL),
 (5, 'EMS#804-AD', 'User System Moderator', 'admin.usersystem@gmail.com', '6bf984e5ac5495f4bf891a740d9bd02184eec7d7', '01316440504', 'Users & System Administrator', 'Inactive', 'ADMIN2020JulSunIMAGE901avatar.png', '2020-07-26 04:10:41', NULL),
-(6, 'EMS#389-AD', 'Marketing Moderator', 'admin.marketing@gmail.com', '6bf984e5ac5495f4bf891a740d9bd02184eec7d7', '01316440504', 'Sales & Marketing Administrator', 'Inactive', 'ADMIN2020JulSunIMAGE830avatar.png', '2020-07-26 04:11:36', '2020-07-26 04:11:44');
+(6, 'EMS#389-AD', 'Marketing Moderator', 'admin.marketing@gmail.com', '6bf984e5ac5495f4bf891a740d9bd02184eec7d7', '01316440504', 'Sales & Marketing Administrator', 'Inactive', 'ADMIN2020JulSunIMAGE830avatar.png', '2020-07-26 04:11:36', '2020-07-26 04:11:44'),
+(8, 'EMS#884-AD', 'Jobayer al mahmud', 'jobayer@gmail.com', '0eeef2f52354b062dceb53a218f76f7a8fc02cc2', '01760516578', 'Root Administrator', 'Active', 'ADMIN2021JanFriIMAGE481AIbEiAIAAABDCJPD-cb33ZWsQiILdmNhcmRfcGhvdG8qKDRhMThhMjliNmE4MDFiOWE0MzgxODIzM2M2OWYyMzQ5ZDlhZWVlYTcwAS23774efovu3AKxFnC9Xde3Oupt.jfif', '2021-01-29 10:55:45', NULL);
 
 -- --------------------------------------------------------
 
@@ -1481,7 +1481,7 @@ ALTER TABLE `smtp_setting`
 -- AUTO_INCREMENT for table `ems_admins`
 --
 ALTER TABLE `ems_admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ADMINS ID', AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ADMINS ID', AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `ems_admission_fees`
